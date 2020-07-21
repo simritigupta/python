@@ -18,5 +18,5 @@ web developement
 First leading choice for many data scientist because of excellent libraries like pandas, numpy ,matplotlib etc.
 
 **popular IDE for developement using python**
-spyder
+spyder,
 jupyter notebook
