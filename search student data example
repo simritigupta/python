@@ -1,0 +1,62 @@
+Sample Input 1:
+Enter the no of student details to be created : 3
+Name: Ram
+Age: 12
+Location:Chennai
+Name: Raj
+Age: 14
+Location:Bangalore
+Name: Ravi
+Age: 17
+Location:Chennai
+
+Sample Output 1:
+Here's the list of student details :
+{'Name': 'Ram', 'Age': 12,'Location':'Chennai'}
+{'Name': 'Raj', 'Age': 14,'Location':'Bangalore'}
+{'Name': 'Ravi', 'Age': 17,'Location':'Chennai'}
+
+Enter the training location: Chennai
+Student(s) enrolled in this training location:
+Ram
+Ravi
+
+
+code:
+  1 import sys
+    2 n=int(input("Enter the no of student details to be created: "))
+    3 d={}
+    4 l=[]
+    5 if(n<=0):
+    6     print("Invalid Input")
+    7     sys.exit(0)
+    8 else:
+    9     for i in range(0,n):
+   10         name=input("Name:")
+   11         age=int(input("Age:"))
+   12         if(age<=10 or age>20):
+   13             print("Invalid Input")
+   14             sys.exit(0)
+   15         else:
+   16             location=input("Location:")
+   17             d={'Name':name,'Age':age,'Location':location}
+   18             l.append(d)
+   19             
+   20             
+   21     print("Here's the list of student details:")
+   22     for i in l:
+   23         print(i)
+   24         
+   25     t=input("Enter the training location:")
+   26     li=[]
+   27     for i in l:
+   28         if(i['Location'].casefold()==t.casefold()):
+   29             li.append(i['Name'])
+   30             
+   31     if len(li)>0:
+   32         print("Student(s) enrolled in this training location:")
+   33         for i in li:
+   34             print(i)
+   35     else:
+   36         print("Invalid location")
+   37         sys.exit(0)
